@@ -24,6 +24,8 @@ yarn-error.log*
 
 *storybook.log
 
+
 dist
 .env
 storybook-static/sb-addons/chromatic-com-storybook-9/manager-bundle.js
+
