@@ -67,3 +67,7 @@ export const Empty = {
     users: [],
   },
 };
+
+/**
+ * A list of Avatars, ellipsized to at most 3. Supports passing only a subset of the total user count.
+ */
