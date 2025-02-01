@@ -12,6 +12,11 @@ const CustomButton = styled.button`
   font-size: 1.2em;
 `;
 
+const StyledButton = styled.button`
+  border: 10px solid red;
+  font-size: 20px;
+`;
+
 function ButtonWrapper(props) {
   return <CustomButton {...props} />;
 }
