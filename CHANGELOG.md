@@ -2,6 +2,25 @@
 
 #### 🐛 Bug Fix
 
+- Improve button [#3](https://github.com/BexrozRavshanov/learnstorybook-design-system/pull/3) ([@BexrozRavshanov](https://github.com/BexrozRavshanov))
+- Improve button [#2](https://github.com/BexrozRavshanov/learnstorybook-design-system/pull/2) ([@BexrozRavshanov](https://github.com/BexrozRavshanov))
+- make Button pop [#1](https://github.com/BexrozRavshanov/learnstorybook-design-system/pull/1) ([@BexrozRavshanov](https://github.com/BexrozRavshanov))
+
+#### ⚠️ Pushed to `main`
+
+- Storybook deployment with GitHub action ([@BexrozRavshanov](https://github.com/BexrozRavshanov))
+- first commit ([@BexrozRavshanov](https://github.com/BexrozRavshanov))
+
+#### Authors: 1
+
+- [@BexrozRavshanov](https://github.com/BexrozRavshanov)
+
+---
+
+# v0.1.1 (Sat Feb 01 2025)
+
+#### 🐛 Bug Fix
+
 - make Button pop [#1](https://github.com/BexrozRavshanov/learnstorybook-design-system/pull/1) ([@BexrozRavshanov](https://github.com/BexrozRavshanov))
 
 #### ⚠️ Pushed to `main`
