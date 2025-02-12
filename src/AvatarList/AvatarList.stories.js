@@ -7,19 +7,23 @@ export default {
 };
 
 export const Short = {
-  args: {
-    users: [
-      {
-        id: '1',
-        name: 'Dominic Nguyen',
-        avatarUrl: 'https://avatars2.githubusercontent.com/u/263385',
-      },
-      {
-        id: '2',
-        name: 'Tom Coleman',
-        avatarUrl: 'https://avatars2.githubusercontent.com/u/132554',
-      },
-    ],
+  args:{
+    users:[{
+      "id": "1",
+      "name": "Dominic Nguyen",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/263385"
+    }, {
+      "id": "2",
+      "name": "Tom Coleman",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/132554"
+    }, {
+      "id": 3,
+      "name": "Jake Paul",
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/132554"
+    }],
+    loading:false,
+    userCount:4,
+    size:"large"
   },
 };
 
@@ -67,3 +71,7 @@ export const Empty = {
     users: [],
   },
 };
+
+/**
+ * A list of Avatars, ellipsized to at most 3. Supports passing only a subset of the total user count.
+ */

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes, { object } from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { color, typography } from '../shared/styles';
@@ -99,11 +99,40 @@ const Initial = styled.div`
   `}
 `;
 
+const UserName = styled.div`
+  color: blue;
+  font-size: ${(props) => sizes[props.fontSize] || sizes.medium}px;
+
+  ${(props) =>
+    props.size === 'tiny' &&
+    css`
+      font-size: ${sizes.tiny}px;
+    `}
+
+  ${(props) =>
+    props.size === 'small' &&
+    css`
+      font-size: ${sizes.small}px;
+    `}
+
+  ${(props) =>
+    props.size === 'medium' &&
+    css`
+      font-size: ${sizes.medium}px;
+    `}
+
+  ${(props) =>
+    props.size === 'large' &&
+    css`
+      font-size: ${sizes.large}px;
+    `}
+`;
+
 /**
 - Use an avatar for attributing actions or content to specific users.
 - The user's name should always be present when using Avatar – either printed beside the avatar or in a tooltip.
 **/
-export function Avatar({ loading, username, src, size, ...props }) {
+export function Avatar({ loading, username, src, size, fontSize, ...props }) {
   let avatarFigure = <Icon icon='useralt' />;
   const a11yProps = {};
 
@@ -122,9 +151,14 @@ export function Avatar({ loading, username, src, size, ...props }) {
   }
 
   return (
-    <Image size={size} loading={loading} src={src} {...a11yProps} {...props}>
-      {avatarFigure}
-    </Image>
+    <>
+      <Image size={size} loading={loading} src={src} {...a11yProps} {...props}>
+        {avatarFigure}
+      </Image>
+      <UserName fontSize={fontSize} {...props}>
+        {username}
+      </UserName>
+    </>
   );
 }
 
@@ -146,6 +180,7 @@ Avatar.propTypes = {
     Avatar comes in four sizes. In most cases, you'll be fine with `medium`.
     */
   size: PropTypes.oneOf(Object.keys(sizes)),
+  fontSize: PropTypes.string,
 };
 
 Avatar.defaultProps = {
@@ -153,4 +188,5 @@ Avatar.defaultProps = {
   username: 'loading',
   src: null,
   size: 'medium',
+  fontSize: 'medium',
 };
